@@ -7,18 +7,74 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB490E772B7E6FA3000D232B /* Vitality_ProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490E762B7E6FA3000D232B /* Vitality_ProApp.swift */; };
-		BB490E792B7E6FA3000D232B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490E782B7E6FA3000D232B /* ContentView.swift */; };
 		BB490E7B2B7E6FA5000D232B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB490E7A2B7E6FA5000D232B /* Assets.xcassets */; };
 		BB490E7E2B7E6FA5000D232B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB490E7D2B7E6FA5000D232B /* Preview Assets.xcassets */; };
+		BB490E902B7E7025000D232B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490E882B7E7025000D232B /* ContentView.swift */; };
+		BB490E922B7E7025000D232B /* VitalityPro.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490E8A2B7E7025000D232B /* VitalityPro.swift */; };
+		BB490E9E2B7E7179000D232B /* VTHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490E9B2B7E7179000D232B /* VTHelpView.swift */; };
+		BB490E9F2B7E7179000D232B /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490E9C2B7E7179000D232B /* CameraView.swift */; };
+		BB490EA02B7E7179000D232B /* ViewfinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490E9D2B7E7179000D232B /* ViewfinderView.swift */; };
+		BB490EA52B7E718A000D232B /* DashboardCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EA12B7E718A000D232B /* DashboardCardView.swift */; };
+		BB490EA62B7E718A000D232B /* DashboardEmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EA22B7E718A000D232B /* DashboardEmojiView.swift */; };
+		BB490EA72B7E718A000D232B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EA32B7E718A000D232B /* DashboardView.swift */; };
+		BB490EA82B7E718A000D232B /* DashboardGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EA42B7E718A000D232B /* DashboardGridView.swift */; };
+		BB490EAC2B7E71B7000D232B /* DetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EA92B7E71B7000D232B /* DetailInfoView.swift */; };
+		BB490EAD2B7E71B7000D232B /* DetailStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EAA2B7E71B7000D232B /* DetailStatisticsView.swift */; };
+		BB490EAE2B7E71B7000D232B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EAB2B7E71B7000D232B /* DetailView.swift */; };
+		BB490EB02B7E71DD000D232B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EAF2B7E71DD000D232B /* SettingsView.swift */; };
+		BB490EB22B7E71F7000D232B /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EB12B7E71F7000D232B /* InfoView.swift */; };
+		BB490EBB2B7E7216000D232B /* EmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EB42B7E7216000D232B /* EmojiModel.swift */; };
+		BB490EBC2B7E7216000D232B /* AmountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EB52B7E7216000D232B /* AmountModel.swift */; };
+		BB490EBD2B7E7216000D232B /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EB62B7E7216000D232B /* CameraModel.swift */; };
+		BB490EBE2B7E7216000D232B /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EB72B7E7216000D232B /* FoodModel.swift */; };
+		BB490EC02B7E7216000D232B /* VitaminModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EB92B7E7216000D232B /* VitaminModel.swift */; };
+		BB490EC12B7E7216000D232B /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EBA2B7E7216000D232B /* DayModel.swift */; };
+		BB490EC52B7E727B000D232B /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EC32B7E727B000D232B /* CameraViewModel.swift */; };
+		BB490EC62B7E727B000D232B /* PropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EC42B7E727B000D232B /* PropertyViewModel.swift */; };
+		BB490ECC2B7E72A2000D232B /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EC82B7E72A1000D232B /* Double.swift */; };
+		BB490ECD2B7E72A2000D232B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EC92B7E72A1000D232B /* DataManager.swift */; };
+		BB490ECE2B7E72A2000D232B /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490ECA2B7E72A1000D232B /* Calendar.swift */; };
+		BB490ECF2B7E72A2000D232B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490ECB2B7E72A2000D232B /* Date.swift */; };
+		BB490ED42B7E72C3000D232B /* Weekdays.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490ED12B7E72C3000D232B /* Weekdays.swift */; };
+		BB490ED52B7E72C3000D232B /* Foods.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490ED22B7E72C3000D232B /* Foods.swift */; };
+		BB490ED62B7E72C3000D232B /* Vitamins.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490ED32B7E72C3000D232B /* Vitamins.swift */; };
+		BB490EDA2B7E733B000D232B /* FoodDetection.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BB490ED92B7E733B000D232B /* FoodDetection.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BB490E732B7E6FA3000D232B /* Vitality Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vitality Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB490E762B7E6FA3000D232B /* Vitality_ProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vitality_ProApp.swift; sourceTree = "<group>"; };
-		BB490E782B7E6FA3000D232B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BB490E7A2B7E6FA5000D232B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB490E7D2B7E6FA5000D232B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BB490E882B7E7025000D232B /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BB490E8A2B7E7025000D232B /* VitalityPro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitalityPro.swift; sourceTree = "<group>"; };
+		BB490E9B2B7E7179000D232B /* VTHelpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTHelpView.swift; sourceTree = "<group>"; };
+		BB490E9C2B7E7179000D232B /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		BB490E9D2B7E7179000D232B /* ViewfinderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewfinderView.swift; sourceTree = "<group>"; };
+		BB490EA12B7E718A000D232B /* DashboardCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardCardView.swift; sourceTree = "<group>"; };
+		BB490EA22B7E718A000D232B /* DashboardEmojiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardEmojiView.swift; sourceTree = "<group>"; };
+		BB490EA32B7E718A000D232B /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		BB490EA42B7E718A000D232B /* DashboardGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardGridView.swift; sourceTree = "<group>"; };
+		BB490EA92B7E71B7000D232B /* DetailInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInfoView.swift; sourceTree = "<group>"; };
+		BB490EAA2B7E71B7000D232B /* DetailStatisticsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailStatisticsView.swift; sourceTree = "<group>"; };
+		BB490EAB2B7E71B7000D232B /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		BB490EAF2B7E71DD000D232B /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BB490EB12B7E71F7000D232B /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		BB490EB42B7E7216000D232B /* EmojiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiModel.swift; sourceTree = "<group>"; };
+		BB490EB52B7E7216000D232B /* AmountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmountModel.swift; sourceTree = "<group>"; };
+		BB490EB62B7E7216000D232B /* CameraModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
+		BB490EB72B7E7216000D232B /* FoodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		BB490EB92B7E7216000D232B /* VitaminModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminModel.swift; sourceTree = "<group>"; };
+		BB490EBA2B7E7216000D232B /* DayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
+		BB490EC32B7E727B000D232B /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		BB490EC42B7E727B000D232B /* PropertyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyViewModel.swift; sourceTree = "<group>"; };
+		BB490EC82B7E72A1000D232B /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		BB490EC92B7E72A1000D232B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		BB490ECA2B7E72A1000D232B /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		BB490ECB2B7E72A2000D232B /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		BB490ED12B7E72C3000D232B /* Weekdays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weekdays.swift; sourceTree = "<group>"; };
+		BB490ED22B7E72C3000D232B /* Foods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Foods.swift; sourceTree = "<group>"; };
+		BB490ED32B7E72C3000D232B /* Vitamins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vitamins.swift; sourceTree = "<group>"; };
+		BB490ED92B7E733B000D232B /* FoodDetection.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FoodDetection.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +107,15 @@
 		BB490E752B7E6FA3000D232B /* Vitality Pro */ = {
 			isa = PBXGroup;
 			children = (
-				BB490E762B7E6FA3000D232B /* Vitality_ProApp.swift */,
-				BB490E782B7E6FA3000D232B /* ContentView.swift */,
+				BB490E8A2B7E7025000D232B /* VitalityPro.swift */,
+				BB490E882B7E7025000D232B /* ContentView.swift */,
+				BB490E952B7E70FD000D232B /* Views */,
+				BB490EB32B7E7207000D232B /* Models */,
+				BB490EC22B7E7269000D232B /* ViewModels */,
+				BB490EC72B7E7289000D232B /* Extensions */,
+				BB490ED02B7E72B1000D232B /* Data */,
 				BB490E7A2B7E6FA5000D232B /* Assets.xcassets */,
+				BB490ED92B7E733B000D232B /* FoodDetection.mlmodel */,
 				BB490E7C2B7E6FA5000D232B /* Preview Content */,
 			);
 			path = "Vitality Pro";
@@ -65,6 +127,108 @@
 				BB490E7D2B7E6FA5000D232B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BB490E952B7E70FD000D232B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB490E972B7E7119000D232B /* DashboardView */,
+				BB490E982B7E712C000D232B /* DetailView */,
+				BB490E962B7E7111000D232B /* CameraView */,
+				BB490E9A2B7E7153000D232B /* SettingsView */,
+				BB490E992B7E7142000D232B /* InfoView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BB490E962B7E7111000D232B /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+				BB490E9C2B7E7179000D232B /* CameraView.swift */,
+				BB490E9D2B7E7179000D232B /* ViewfinderView.swift */,
+				BB490E9B2B7E7179000D232B /* VTHelpView.swift */,
+			);
+			path = CameraView;
+			sourceTree = "<group>";
+		};
+		BB490E972B7E7119000D232B /* DashboardView */ = {
+			isa = PBXGroup;
+			children = (
+				BB490EA32B7E718A000D232B /* DashboardView.swift */,
+				BB490EA42B7E718A000D232B /* DashboardGridView.swift */,
+				BB490EA12B7E718A000D232B /* DashboardCardView.swift */,
+				BB490EA22B7E718A000D232B /* DashboardEmojiView.swift */,
+			);
+			path = DashboardView;
+			sourceTree = "<group>";
+		};
+		BB490E982B7E712C000D232B /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				BB490EAB2B7E71B7000D232B /* DetailView.swift */,
+				BB490EA92B7E71B7000D232B /* DetailInfoView.swift */,
+				BB490EAA2B7E71B7000D232B /* DetailStatisticsView.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		BB490E992B7E7142000D232B /* InfoView */ = {
+			isa = PBXGroup;
+			children = (
+				BB490EB12B7E71F7000D232B /* InfoView.swift */,
+			);
+			path = InfoView;
+			sourceTree = "<group>";
+		};
+		BB490E9A2B7E7153000D232B /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				BB490EAF2B7E71DD000D232B /* SettingsView.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		BB490EB32B7E7207000D232B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB490EB52B7E7216000D232B /* AmountModel.swift */,
+				BB490EB62B7E7216000D232B /* CameraModel.swift */,
+				BB490EBA2B7E7216000D232B /* DayModel.swift */,
+				BB490EB42B7E7216000D232B /* EmojiModel.swift */,
+				BB490EB72B7E7216000D232B /* FoodModel.swift */,
+				BB490EB92B7E7216000D232B /* VitaminModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BB490EC22B7E7269000D232B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BB490EC32B7E727B000D232B /* CameraViewModel.swift */,
+				BB490EC42B7E727B000D232B /* PropertyViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BB490EC72B7E7289000D232B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB490ECA2B7E72A1000D232B /* Calendar.swift */,
+				BB490EC92B7E72A1000D232B /* DataManager.swift */,
+				BB490ECB2B7E72A2000D232B /* Date.swift */,
+				BB490EC82B7E72A1000D232B /* Double.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BB490ED02B7E72B1000D232B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BB490ED22B7E72C3000D232B /* Foods.swift */,
+				BB490ED32B7E72C3000D232B /* Vitamins.swift */,
+				BB490ED12B7E72C3000D232B /* Weekdays.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +263,7 @@
 				TargetAttributes = {
 					BB490E722B7E6FA3000D232B = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
 				};
 			};
@@ -137,8 +302,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB490E792B7E6FA3000D232B /* ContentView.swift in Sources */,
-				BB490E772B7E6FA3000D232B /* Vitality_ProApp.swift in Sources */,
+				BB490EAD2B7E71B7000D232B /* DetailStatisticsView.swift in Sources */,
+				BB490EBC2B7E7216000D232B /* AmountModel.swift in Sources */,
+				BB490EBD2B7E7216000D232B /* CameraModel.swift in Sources */,
+				BB490E9E2B7E7179000D232B /* VTHelpView.swift in Sources */,
+				BB490EC62B7E727B000D232B /* PropertyViewModel.swift in Sources */,
+				BB490ED42B7E72C3000D232B /* Weekdays.swift in Sources */,
+				BB490EA52B7E718A000D232B /* DashboardCardView.swift in Sources */,
+				BB490EC02B7E7216000D232B /* VitaminModel.swift in Sources */,
+				BB490EC52B7E727B000D232B /* CameraViewModel.swift in Sources */,
+				BB490ECE2B7E72A2000D232B /* Calendar.swift in Sources */,
+				BB490EA82B7E718A000D232B /* DashboardGridView.swift in Sources */,
+				BB490ECC2B7E72A2000D232B /* Double.swift in Sources */,
+				BB490E902B7E7025000D232B /* ContentView.swift in Sources */,
+				BB490EC12B7E7216000D232B /* DayModel.swift in Sources */,
+				BB490EA72B7E718A000D232B /* DashboardView.swift in Sources */,
+				BB490ED62B7E72C3000D232B /* Vitamins.swift in Sources */,
+				BB490E922B7E7025000D232B /* VitalityPro.swift in Sources */,
+				BB490EA02B7E7179000D232B /* ViewfinderView.swift in Sources */,
+				BB490ED52B7E72C3000D232B /* Foods.swift in Sources */,
+				BB490EBB2B7E7216000D232B /* EmojiModel.swift in Sources */,
+				BB490EDA2B7E733B000D232B /* FoodDetection.mlmodel in Sources */,
+				BB490EB02B7E71DD000D232B /* SettingsView.swift in Sources */,
+				BB490E9F2B7E7179000D232B /* CameraView.swift in Sources */,
+				BB490EAC2B7E71B7000D232B /* DetailInfoView.swift in Sources */,
+				BB490EA62B7E718A000D232B /* DashboardEmojiView.swift in Sources */,
+				BB490ECD2B7E72A2000D232B /* DataManager.swift in Sources */,
+				BB490EBE2B7E7216000D232B /* FoodModel.swift in Sources */,
+				BB490EB22B7E71F7000D232B /* InfoView.swift in Sources */,
+				BB490ECF2B7E72A2000D232B /* Date.swift in Sources */,
+				BB490EAE2B7E71B7000D232B /* DetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Vitality Pro/Preview Content\"";
@@ -278,8 +472,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,7 +480,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stoobit.Vitality-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,6 +496,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Vitality Pro/Preview Content\"";
@@ -307,8 +506,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +514,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stoobit.Vitality-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
