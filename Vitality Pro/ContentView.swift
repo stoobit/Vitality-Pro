@@ -2,11 +2,9 @@ import SwiftUI
 
 struct ContentView: View {
     let userdefaultskey: String = "$daydata"
-    
-    @State var properties: PropertyModel = .init()
     @State var days: [String: Day] = [:]
-    
-    @AppStorage("last opened") var date: Data = Data()
+    @AppStorage("last opened") var date: Data = .init()
+    @State var properties: PropertyModel = .init()
     
     var body: some View {
         @Bindable var properties = properties
@@ -14,26 +12,10 @@ struct ContentView: View {
         NavigationStack {
             DashboardView(days: days)
                 .navigationTitle("Vitality Pro")
+                .toolbar { ToolbarView() }
                 .toolbarRole(.editor)
-                .toolbar(content: {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button("Camera", systemImage: "camera.fill", action: {
-                            self.properties.showCamera.toggle()
-                        })
-                    }
-                    
-                    ToolbarItemGroup(placement: .topBarLeading) {
-                        Button("Settings", systemImage: "gearshape.fill", action: {
-                            self.properties.showSettings.toggle()
-                        })
-                        
-                        Button("Information", systemImage: "carrot.fill", action: {
-                            self.properties.showInfo.toggle()
-                        })
-                    }
-                })
                 .fullScreenCover(isPresented: $properties.showCamera, content: {
-                    CameraView() { food in
+                    CameraView { food in
                         if let food = food {
                             add(food: food)
                         }
@@ -47,8 +29,9 @@ struct ContentView: View {
                     SettingsView()
                         .scrollIndicators(.never)
                 })
-                .onAppear { 
+                .onAppear {
                     setDays()
+                    accessHealthData()
                 }
                 .onChange(of: days) {
                     saveDays()
@@ -65,4 +48,6 @@ struct ContentView: View {
             days[day]?.amounts.append(amount)
         }
     }
+    
+    func accessHealthData() {}
 }
