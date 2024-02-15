@@ -2,27 +2,37 @@ import Foundation
 
 extension Date {
     func getWeekday() -> String {
-         let weekday = Calendar.current.component(
+        let weekday = Calendar.current.component(
             .weekday, from: self
-         )
-        
+        )
+
         switch weekday {
-        case 1: 
-            return "Sunday"
-        case 2: 
-            return "Monday"
-        case 3: 
-            return "Tuesday"
-        case 4: 
-            return "Wednesday"
-        case 5: 
-            return "Thursday"
-        case 6: 
-            return "Friday"
-        case 7: 
-            return "Saturday"
-        default: 
+        case 1:
+            return "Sun"
+        case 2:
+            return "Mon"
+        case 3:
+            return "Tue"
+        case 4:
+            return "Wed"
+        case 5:
+            return "Thur"
+        case 6:
+            return "Fri"
+        case 7:
+            return "Sat"
+        default:
             return "error"
         }
+    }
+}
+
+extension Date: RawRepresentable {
+    public var rawValue: String {
+        self.timeIntervalSinceReferenceDate.description
+    }
+
+    public init?(rawValue: String) {
+        self = Date(timeIntervalSinceReferenceDate: Double(rawValue) ?? 0.0)
     }
 }

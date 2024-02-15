@@ -39,7 +39,7 @@ struct DetailInfoView: View {
             
             HStack {
                 VStack(alignment: .leading) {
-                    Text("Minimum Recommended Daily Amount")
+                    Text("Minimum RDA")
                         .fontWeight(.medium)
                     
                     HStack(spacing: 5) {

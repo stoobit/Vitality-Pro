@@ -13,7 +13,7 @@ struct ContentView: View {
         
         NavigationStack {
             DashboardView(days: days)
-                .navigationTitle("Vitatrack")
+                .navigationTitle("Vitality Pro")
                 .toolbarRole(.editor)
                 .toolbar(content: {
                     ToolbarItem(placement: .topBarTrailing) {

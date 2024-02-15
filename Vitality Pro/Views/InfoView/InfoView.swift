@@ -26,7 +26,7 @@ struct InfoView: View {
                 })
                 
                 Section(content: {
-                    Text("**Vitatrack** makes it easy to monitor your daily vitamin intake. By capturing images of the fruits and vegetables you eat, the app automatically identifies and records their corresponding vitamin levels in *mg*. This not only provides valuable insights into your food intake but also helps you maintaining a healthy lifestyle. Since **Vitatrack** focuses exclusively on fruits and vegetables, the app is suitable for meat eaters as well as vegetarians and vegans.")
+                    Text("**Vitality Pro** makes it easy to monitor your daily vitamin intake. By capturing images of the fruits and vegetables you eat, the app automatically identifies and records their corresponding vitamin levels in *mg*. This not only provides valuable insights into your food intake but also helps you maintaining a healthy lifestyle. Since **Vitality Pro** focuses exclusively on fruits and vegetables, the app is suitable for meat eaters as well as vegetarians and vegans.")
                 }, header: {
                     Label(title: { Text("How can this app help?") }, icon: {
                         Image(systemName: "app.badge.checkmark.fill")

@@ -6,13 +6,13 @@ struct DashboardGridView: View {
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: columns, spacing: 5) {
+            VStack(spacing: 20) {
                 ForEach(vitamins) { vitamin in
                     DashboardCardView(vitamin: vitamin, days: days)
-                        .padding()
                 }
             }
-            .padding()
+            .padding(.horizontal, 20)
+            .padding(.top, 10)
         }
     }
 }

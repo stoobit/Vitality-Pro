@@ -1,11 +1,11 @@
 import Foundation
 
 let weekdays: [String] = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday", 
-    "Sunday"
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thur",
+    "Fri",
+    "Sat", 
+    "Sun"
 ]

@@ -1,7 +1,7 @@
 import AVFoundation
 import CoreImage
-import UIKit
 import os.log
+import UIKit
 
 class Camera: AVCaptureDevice.RotationCoordinator {
     private let captureSession = AVCaptureSession()
@@ -13,8 +13,8 @@ class Camera: AVCaptureDevice.RotationCoordinator {
     
     private var captureDevices: [AVCaptureDevice] {
         AVCaptureDevice.DiscoverySession(deviceTypes: [
-            .builtInTrueDepthCamera, 
-            .builtInDualCamera, 
+            .builtInTrueDepthCamera,
+            .builtInDualCamera,
             .builtInDualWideCamera,
             .builtInWideAngleCamera,
             .builtInDualWideCamera
@@ -28,8 +28,8 @@ class Camera: AVCaptureDevice.RotationCoordinator {
     
     private var availableCaptureDevices: [AVCaptureDevice] {
         captureDevices
-            .filter( { $0.isConnected } )
-            .filter( { !$0.isSuspended } )
+            .filter { $0.isConnected }
+            .filter { !$0.isSuspended }
     }
     
     private var captureDevice: AVCaptureDevice? {
@@ -56,27 +56,23 @@ class Camera: AVCaptureDevice.RotationCoordinator {
     
     var isPreviewPaused = false
     
-    lazy var previewStream: AsyncStream<CIImage> = {
-        AsyncStream { continuation in
-            addToPreviewStream = { ciImage in
-                if !self.isPreviewPaused {
-                    continuation.yield(ciImage)
-                }
+    lazy var previewStream: AsyncStream<CIImage> = AsyncStream { continuation in
+        addToPreviewStream = { ciImage in
+            if !self.isPreviewPaused {
+                continuation.yield(ciImage)
             }
         }
-    }()
+    }
     
-    lazy var photoStream: AsyncStream<AVCapturePhoto> = {
-        AsyncStream { continuation in
-            addToPhotoStream = { photo in
-                continuation.yield(photo)
-            }
+    lazy var photoStream: AsyncStream<AVCapturePhoto> = AsyncStream { continuation in
+        addToPhotoStream = { photo in
+            continuation.yield(photo)
         }
-    }()
+    }
     
     func initialize() {
         sessionQueue = DispatchQueue(label: "session queue")
-        captureDevice = self.captureDevice ?? AVCaptureDevice.default(
+        captureDevice = captureDevice ?? AVCaptureDevice.default(
             .builtInWideAngleCamera, for: AVMediaType.video, position: .back
         )
         
@@ -84,9 +80,8 @@ class Camera: AVCaptureDevice.RotationCoordinator {
     }
     
     private func configureCaptureSession(completionHandler: (_ success: Bool) -> Void) {
-        
         var success = false
-        self.captureSession.beginConfiguration()
+        captureSession.beginConfiguration()
         
         defer {
             self.captureSession.commitConfiguration()
@@ -163,7 +158,7 @@ class Camera: AVCaptureDevice.RotationCoordinator {
         guard let validDevice = device else { return nil }
         do {
             return try AVCaptureDeviceInput(device: validDevice)
-        } catch let error {
+        } catch {
             logger.error("Error getting capture device input: \(error.localizedDescription)")
             return nil
         }
@@ -192,9 +187,7 @@ class Camera: AVCaptureDevice.RotationCoordinator {
     
     private func updateVideoOutputConnection() {
         if let videoOutput = videoOutput, let videoOutputConnection = videoOutput.connection(with: .video) {
-            if videoOutputConnection.isVideoMirroringSupported {
-                
-            }
+            if videoOutputConnection.isVideoMirroringSupported {}
         }
     }
     
@@ -231,17 +224,11 @@ class Camera: AVCaptureDevice.RotationCoordinator {
             }
         }
     }
-
-    private var deviceOrientation: UIDeviceOrientation {
-        let orientation = UIDevice.current.orientation
-        return orientation
-    }
     
     func takePhoto() {
-        guard let photoOutput = self.photoOutput else { return }
+        guard let photoOutput = photoOutput else { return }
         
         sessionQueue.async {
-        
             var photoSettings = AVCapturePhotoSettings()
 
             if photoOutput.availablePhotoCodecTypes.contains(.hevc) {
@@ -266,9 +253,7 @@ class Camera: AVCaptureDevice.RotationCoordinator {
 }
 
 extension Camera: AVCapturePhotoCaptureDelegate {
-    
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        
         if let error = error {
             logger.error("Error capturing photo: \(error.localizedDescription)")
             return
@@ -279,7 +264,6 @@ extension Camera: AVCapturePhotoCaptureDelegate {
 }
 
 extension Camera: AVCaptureVideoDataOutputSampleBufferDelegate {
-    
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         guard let pixelBuffer = sampleBuffer.imageBuffer else { return }
         
@@ -291,23 +275,4 @@ extension Camera: AVCaptureVideoDataOutputSampleBufferDelegate {
     }
 }
 
-fileprivate extension UIScreen {
-
-    var orientation: UIDeviceOrientation {
-        let point = coordinateSpace.convert(CGPoint.zero, to: fixedCoordinateSpace)
-        if point == CGPoint.zero {
-            return .portrait
-        } else if point.x != 0 && point.y != 0 {
-            return .portraitUpsideDown
-        } else if point.x == 0 && point.y != 0 {
-            return .landscapeRight //.landscapeLeft
-        } else if point.x != 0 && point.y == 0 {
-            return .landscapeLeft //.landscapeRight
-        } else {
-            return .unknown
-        }
-    }
-}
-
-fileprivate let logger = Logger(subsystem: "com.apple.swiftplaygroundscontent.capturingphotos", category: "Camera")
-
+private let logger = Logger(subsystem: "Vitality Pro", category: "Camera")
