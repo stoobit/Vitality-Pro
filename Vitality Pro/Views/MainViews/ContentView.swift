@@ -1,8 +1,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    let userdefaultskey: String = "$daydata"
-    @State var days: [String: Day] = [:]
     @AppStorage("last opened") var date: Data = .init()
     @State var properties: PropertyModel = .init()
     
@@ -10,7 +8,7 @@ struct ContentView: View {
         @Bindable var properties = properties
         
         NavigationStack {
-            DashboardView(days: days)
+            DashboardView()
                 .navigationTitle("Vitality Pro")
                 .toolbar { ToolbarView() }
                 .toolbarRole(.editor)
@@ -29,25 +27,16 @@ struct ContentView: View {
                     SettingsView()
                         .scrollIndicators(.never)
                 })
-                .onAppear {
-                    setDays()
-                    accessHealthData()
-                }
-                .onChange(of: days) {
-                    saveDays()
-                }
                 .environment(properties)
         }
     }
     
     func add(food: Food) {
-        let day = Date().getWeekday()
-        
-        for vitamin in food.vitamins {
-            let amount = Amount(vitamin: vitamin.key, value: vitamin.value)
-            days[day]?.amounts.append(amount)
-        }
+//        let day = Date().getWeekday()
+//        
+//        for vitamin in food.vitamins {
+//            let amount = Amount(vitamin: vitamin.key, value: vitamin.value)
+//            days[day]?.amounts.append(amount)
+//        }
     }
-    
-    func accessHealthData() {}
 }

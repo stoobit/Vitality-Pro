@@ -4,10 +4,8 @@ struct DashboardCardView: View {
     @AppStorage("biologicalsex") var biologicalFemale: Bool = true 
     @AppStorage("percentagegoal") var percentage: Double = 0.5
     
-    var vitamin: Vitamin
-    var days: [String: Day]
-    
     @State var showDetail: Bool = false
+    var vitamin: Vitamin
     
     var body: some View {
         Button(action: { showDetail.toggle() }) {
@@ -83,7 +81,7 @@ struct DashboardCardView: View {
         .frame(maxWidth: .infinity)
         .frame(height: 200)
         .sheet(isPresented: $showDetail, content: {
-            DetailView(vitamin: vitamin, emojis: emojis, days: days)
+            DetailView(vitamin: vitamin, emojis: emojis)
                 .scrollIndicators(.never)
         })
     }
@@ -106,16 +104,16 @@ struct DashboardCardView: View {
     }
     
     var amount: Double {
-        guard let day = days[Date().getWeekday()] else { return 0 }
-        let amounts = day.amounts
-            .filter { $0.vitamin == vitamin.title }
-            .map(\.value)
-        
+//        guard let day = days[Date().getWeekday()] else { return 0 }
+//        let amounts = day.amounts
+//            .filter { $0.vitamin == vitamin.title }
+//            .map(\.value)
+//        
         var total: Double = 0 
-        for value in amounts {
-            total += value
-        }
-        
+//        for value in amounts {
+//            total += value
+//        }
+//        
         return total
     }
     

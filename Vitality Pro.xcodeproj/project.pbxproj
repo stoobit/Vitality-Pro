@@ -24,15 +24,12 @@
 		BB490EB02B7E71DD000D232B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EAF2B7E71DD000D232B /* SettingsView.swift */; };
 		BB490EB22B7E71F7000D232B /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EB12B7E71F7000D232B /* InfoView.swift */; };
 		BB490EBB2B7E7216000D232B /* EmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EB42B7E7216000D232B /* EmojiModel.swift */; };
-		BB490EBC2B7E7216000D232B /* AmountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EB52B7E7216000D232B /* AmountModel.swift */; };
 		BB490EBD2B7E7216000D232B /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EB62B7E7216000D232B /* CameraModel.swift */; };
 		BB490EBE2B7E7216000D232B /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EB72B7E7216000D232B /* FoodModel.swift */; };
 		BB490EC02B7E7216000D232B /* VitaminModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EB92B7E7216000D232B /* VitaminModel.swift */; };
-		BB490EC12B7E7216000D232B /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EBA2B7E7216000D232B /* DayModel.swift */; };
 		BB490EC52B7E727B000D232B /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EC32B7E727B000D232B /* CameraViewModel.swift */; };
 		BB490EC62B7E727B000D232B /* PropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EC42B7E727B000D232B /* PropertyViewModel.swift */; };
 		BB490ECC2B7E72A2000D232B /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EC82B7E72A1000D232B /* Double.swift */; };
-		BB490ECD2B7E72A2000D232B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EC92B7E72A1000D232B /* DataManager.swift */; };
 		BB490ECE2B7E72A2000D232B /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490ECA2B7E72A1000D232B /* Calendar.swift */; };
 		BB490ECF2B7E72A2000D232B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490ECB2B7E72A2000D232B /* Date.swift */; };
 		BB490ED42B7E72C3000D232B /* Weekdays.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490ED12B7E72C3000D232B /* Weekdays.swift */; };
@@ -47,6 +44,7 @@
 		BB490EF12B7ED997000D232B /* HKAuthorizationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EF02B7ED997000D232B /* HKAuthorizationStatus.swift */; };
 		BB490EF32B7ED9C7000D232B /* HKBiologicalSex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EF22B7ED9C7000D232B /* HKBiologicalSex.swift */; };
 		BB490EF52B7EDA1C000D232B /* HKDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EF42B7EDA1C000D232B /* HKDataHandler.swift */; };
+		BB4917132B7EF548000D232B /* HealthKitModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4917122B7EF548000D232B /* HealthKitModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,15 +66,12 @@
 		BB490EAF2B7E71DD000D232B /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		BB490EB12B7E71F7000D232B /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		BB490EB42B7E7216000D232B /* EmojiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiModel.swift; sourceTree = "<group>"; };
-		BB490EB52B7E7216000D232B /* AmountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmountModel.swift; sourceTree = "<group>"; };
 		BB490EB62B7E7216000D232B /* CameraModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
 		BB490EB72B7E7216000D232B /* FoodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
 		BB490EB92B7E7216000D232B /* VitaminModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitaminModel.swift; sourceTree = "<group>"; };
-		BB490EBA2B7E7216000D232B /* DayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		BB490EC32B7E727B000D232B /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		BB490EC42B7E727B000D232B /* PropertyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyViewModel.swift; sourceTree = "<group>"; };
 		BB490EC82B7E72A1000D232B /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
-		BB490EC92B7E72A1000D232B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		BB490ECA2B7E72A1000D232B /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		BB490ECB2B7E72A2000D232B /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		BB490ED12B7E72C3000D232B /* Weekdays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weekdays.swift; sourceTree = "<group>"; };
@@ -92,6 +87,7 @@
 		BB490EF02B7ED997000D232B /* HKAuthorizationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKAuthorizationStatus.swift; sourceTree = "<group>"; };
 		BB490EF22B7ED9C7000D232B /* HKBiologicalSex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKBiologicalSex.swift; sourceTree = "<group>"; };
 		BB490EF42B7EDA1C000D232B /* HKDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKDataHandler.swift; sourceTree = "<group>"; };
+		BB4917122B7EF548000D232B /* HealthKitModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,9 +208,7 @@
 		BB490EB32B7E7207000D232B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BB490EB52B7E7216000D232B /* AmountModel.swift */,
 				BB490EB62B7E7216000D232B /* CameraModel.swift */,
-				BB490EBA2B7E7216000D232B /* DayModel.swift */,
 				BB490EB42B7E7216000D232B /* EmojiModel.swift */,
 				BB490EB72B7E7216000D232B /* FoodModel.swift */,
 				BB490EB92B7E7216000D232B /* VitaminModel.swift */,
@@ -235,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				BB490ECA2B7E72A1000D232B /* Calendar.swift */,
-				BB490EC92B7E72A1000D232B /* DataManager.swift */,
 				BB490ECB2B7E72A2000D232B /* Date.swift */,
 				BB490EC82B7E72A1000D232B /* Double.swift */,
 			);
@@ -281,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				BB490EE22B7E89F1000D232B /* HealthKitViewModel.swift */,
+				BB4917122B7EF548000D232B /* HealthKitModels.swift */,
 				BB490EEE2B7ED94C000D232B /* HKHealthRequest.swift */,
 				BB490EF02B7ED997000D232B /* HKAuthorizationStatus.swift */,
 				BB490EF22B7ED9C7000D232B /* HKBiologicalSex.swift */,
@@ -361,9 +355,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB490EAD2B7E71B7000D232B /* DetailStatisticsView.swift in Sources */,
-				BB490EBC2B7E7216000D232B /* AmountModel.swift in Sources */,
 				BB490EBD2B7E7216000D232B /* CameraModel.swift in Sources */,
 				BB490E9E2B7E7179000D232B /* VTHelpView.swift in Sources */,
+				BB4917132B7EF548000D232B /* HealthKitModels.swift in Sources */,
 				BB490EC62B7E727B000D232B /* PropertyViewModel.swift in Sources */,
 				BB490ED42B7E72C3000D232B /* Weekdays.swift in Sources */,
 				BB490EE42B7E89F1000D232B /* HealthKitViewModel.swift in Sources */,
@@ -374,7 +368,6 @@
 				BB490EA82B7E718A000D232B /* DashboardGridView.swift in Sources */,
 				BB490ECC2B7E72A2000D232B /* Double.swift in Sources */,
 				BB490E902B7E7025000D232B /* ContentView.swift in Sources */,
-				BB490EC12B7E7216000D232B /* DayModel.swift in Sources */,
 				BB490EEF2B7ED94C000D232B /* HKHealthRequest.swift in Sources */,
 				BB490EE92B7EBA48000D232B /* OnboardingView.swift in Sources */,
 				BB490EA72B7E718A000D232B /* DashboardView.swift in Sources */,
@@ -392,7 +385,6 @@
 				BB490EE72B7EAF1F000D232B /* UnavailableView.swift in Sources */,
 				BB490EDD2B7E847D000D232B /* ToolbarView.swift in Sources */,
 				BB490EA62B7E718A000D232B /* DashboardEmojiView.swift in Sources */,
-				BB490ECD2B7E72A2000D232B /* DataManager.swift in Sources */,
 				BB490EBE2B7E7216000D232B /* FoodModel.swift in Sources */,
 				BB490EF32B7ED9C7000D232B /* HKBiologicalSex.swift in Sources */,
 				BB490EB22B7E71F7000D232B /* InfoView.swift in Sources */,

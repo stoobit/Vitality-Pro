@@ -23,7 +23,13 @@ import HealthKit
         .dietaryVitaminB12,
         .dietaryRiboflavin,
         .dietaryNiacin,
+        .dietaryBiotin,
+        .dietaryThiamin,
+        .dietaryPantothenicAcid,
+        .dietaryFolate
     ]
+
+    var data: [VitaminData] = []
 
     func healthRequest() {
         setupHealthRequest(healthStore: healthStore) {

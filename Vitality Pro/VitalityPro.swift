@@ -14,8 +14,11 @@ struct VitalityPro: App {
                     ContentView()
                         .onAppear {
                             sex()
+                            healthViewModel.loadData()
                         }
                     
+                    Button("do sumn", action: { print(healthViewModel.data) })
+
                 } else {
                     UnavailableView()
                 }

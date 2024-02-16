@@ -6,8 +6,6 @@ struct DetailStatisticsView: View {
     @AppStorage("percentagegoal") var percentage: Double = 0.5
     
     var vitamin: Vitamin
-    var days: [String: Day]
-    
     var body: some View {
         VStack {
             HStack {
@@ -67,6 +65,7 @@ struct DetailStatisticsView: View {
                         .cornerRadius(60)
                 }
             }
+            .chartYAxisLabel("mg", position: .bottom)
             .frame(height: 350)
         }
         .padding(.vertical, 5)
@@ -74,20 +73,14 @@ struct DetailStatisticsView: View {
     
     func getAmount(of weekday: String) -> Double {
         var value: Double = 0
-        guard let amounts = days[weekday]?.amounts else { return 0 }
-        
-        for amount in amounts {
-            if amount.vitamin == vitamin.title {
-                value += amount.value
-            }
-        }
-        
+//        guard let amounts = days[weekday]?.amounts else { return 0 }
+//        
+//        for amount in amounts {
+//            if amount.vitamin == vitamin.title {
+//                value += amount.value
+//            }
+//        }
+//        
         return value
-    }
-}
-
-#Preview {
-    Form {
-        DetailStatisticsView(vitamin: vitamins[2], days: [:])
     }
 }
