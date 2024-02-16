@@ -8,7 +8,7 @@ struct InfoView: View {
             Form {
                 
                 Section(content: {
-                    Text("Many people around the world choose fast food because of its convenience and taste. However, fast food often lacks essential nutrients, potentially leading to an unbalanced diet and vitamin deficiency.")
+                    Text("More and more people around the world choose fast food because of its convenience and taste. However, fast food often lacks essential nutrients, especially vitamins. These vitamins are needed by the human body to function properly.")
                 }, header: {
                     Label(title: { Text("What is vitamin deficiency?") }, icon: {
                         Image(systemName: "exclamationmark.triangle.fill")
@@ -26,7 +26,7 @@ struct InfoView: View {
                 })
                 
                 Section(content: {
-                    Text("**Vitality Pro** makes it easy to monitor your daily vitamin intake. By capturing images of the fruits and vegetables you eat, the app automatically identifies and records their corresponding vitamin levels in *mg*. This not only provides valuable insights into your food intake but also helps you maintaining a healthy lifestyle. Since **Vitality Pro** focuses exclusively on fruits and vegetables, the app is suitable for meat eaters as well as vegetarians and vegans.")
+                    Text("**Vitality Pro** makes it easy to track your daily vitamin intake. By capturing images of the fruits and vegetables you eat, the app automatically identifies corresponding vitamin levels and stores them through Apple's **Health** app. This not only provides valuable insights into your food intake but also helps you maintaining a healthy lifestyle.")
                 }, header: {
                     Label(title: { Text("How can this app help?") }, icon: {
                         Image(systemName: "app.badge.checkmark.fill")
@@ -54,10 +54,16 @@ struct InfoView: View {
                 })
             }
             .environment(\.defaultMinListRowHeight, 55)
-            .navigationTitle("About")
+            .toolbarBackground(.visible, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Done", action: { dismiss() })
+                }
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    Text("About")
+                        .foregroundStyle(Color.primary)
+                        .font(.headline.bold())
                 }
             }
         }

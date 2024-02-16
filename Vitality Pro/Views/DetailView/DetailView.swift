@@ -15,10 +15,17 @@ struct DetailView: View {
             }
             .environment(\.defaultMinListRowHeight, 55)
             .scrollIndicators(.never)
-            .navigationTitle(vitamin.title)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(.visible, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Done", action: { dismiss() })
+                }
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    Text(vitamin.title)
+                        .foregroundStyle(Color.primary)
+                        .font(.headline.bold())
                 }
             }
         }

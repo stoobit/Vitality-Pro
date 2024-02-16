@@ -6,10 +6,6 @@ struct HelpView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section {
-                    Text("Take a photo of the fruits/vegetables you eat to track your vitamin intake.")
-                }
-                
                 Section("Available fruits/vegetables") {
                     ForEach(foods) { food in 
                         HStack {
@@ -40,10 +36,16 @@ struct HelpView: View {
             }
             .environment(\.defaultMinListRowHeight, 55)
             .scrollIndicators(.hidden)
-            .navigationTitle("Help")
+            .toolbarBackground(.visible, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Done", action: { dismiss() })
+                }
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    Text("Fruits & Vegetables")
+                        .foregroundStyle(Color.primary)
+                        .font(.headline.bold())
                 }
             }
         }

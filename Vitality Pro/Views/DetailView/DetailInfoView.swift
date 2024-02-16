@@ -8,7 +8,7 @@ struct DetailInfoView: View {
     var emojis: [Emoji]
     var days: [String: Day]
     
-     let columns = [GridItem(.adaptive(minimum: 58))]
+     let columns = [GridItem(.adaptive(minimum: 46))]
 
     var body: some View {
         Section("Scientific Name") {
@@ -16,8 +16,8 @@ struct DetailInfoView: View {
         }
         
         Section("Food") {
-            LazyVGrid(columns: columns, spacing: 28) {
-                ForEach(emojis) { emoji in 
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach(emojis) { emoji in
                     Text(emoji.description)
                         .frame(width: 50, height: 50)
                         .font(.title2)

@@ -42,6 +42,11 @@
 		BB490EDD2B7E847D000D232B /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EDC2B7E847D000D232B /* ToolbarView.swift */; };
 		BB490EE42B7E89F1000D232B /* HealthKitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EE22B7E89F1000D232B /* HealthKitViewModel.swift */; };
 		BB490EE72B7EAF1F000D232B /* UnavailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EE62B7EAF1F000D232B /* UnavailableView.swift */; };
+		BB490EE92B7EBA48000D232B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EE82B7EBA48000D232B /* OnboardingView.swift */; };
+		BB490EEF2B7ED94C000D232B /* HKHealthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EEE2B7ED94C000D232B /* HKHealthRequest.swift */; };
+		BB490EF12B7ED997000D232B /* HKAuthorizationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EF02B7ED997000D232B /* HKAuthorizationStatus.swift */; };
+		BB490EF32B7ED9C7000D232B /* HKBiologicalSex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EF22B7ED9C7000D232B /* HKBiologicalSex.swift */; };
+		BB490EF52B7EDA1C000D232B /* HKDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EF42B7EDA1C000D232B /* HKDataHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +87,11 @@
 		BB490EE22B7E89F1000D232B /* HealthKitViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitViewModel.swift; sourceTree = "<group>"; };
 		BB490EE52B7E9530000D232B /* Vitality Pro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Vitality Pro.entitlements"; sourceTree = "<group>"; };
 		BB490EE62B7EAF1F000D232B /* UnavailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnavailableView.swift; sourceTree = "<group>"; };
+		BB490EE82B7EBA48000D232B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		BB490EEE2B7ED94C000D232B /* HKHealthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKHealthRequest.swift; sourceTree = "<group>"; };
+		BB490EF02B7ED997000D232B /* HKAuthorizationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKAuthorizationStatus.swift; sourceTree = "<group>"; };
+		BB490EF22B7ED9C7000D232B /* HKBiologicalSex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKBiologicalSex.swift; sourceTree = "<group>"; };
+		BB490EF42B7EDA1C000D232B /* HKDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKDataHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,11 +126,10 @@
 			children = (
 				BB490EE52B7E9530000D232B /* Vitality Pro.entitlements */,
 				BB490E8A2B7E7025000D232B /* VitalityPro.swift */,
-				BB490E882B7E7025000D232B /* ContentView.swift */,
-				BB490EE62B7EAF1F000D232B /* UnavailableView.swift */,
 				BB490E952B7E70FD000D232B /* Views */,
 				BB490EB32B7E7207000D232B /* Models */,
 				BB490EC22B7E7269000D232B /* ViewModels */,
+				BB490EED2B7EBBEB000D232B /* HealthKit */,
 				BB490EC72B7E7289000D232B /* Extensions */,
 				BB490ED02B7E72B1000D232B /* Data */,
 				BB490E7A2B7E6FA5000D232B /* Assets.xcassets */,
@@ -141,6 +150,8 @@
 		BB490E952B7E70FD000D232B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BB490EEB2B7EBAAB000D232B /* MainViews */,
+				BB490EEA2B7EBA9C000D232B /* OnboardingView */,
 				BB490EDB2B7E8457000D232B /* ToolbarView */,
 				BB490E972B7E7119000D232B /* DashboardView */,
 				BB490E982B7E712C000D232B /* DetailView */,
@@ -216,7 +227,6 @@
 			children = (
 				BB490EC32B7E727B000D232B /* CameraViewModel.swift */,
 				BB490EC42B7E727B000D232B /* PropertyViewModel.swift */,
-				BB490EE22B7E89F1000D232B /* HealthKitViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -248,6 +258,35 @@
 				BB490EDC2B7E847D000D232B /* ToolbarView.swift */,
 			);
 			path = ToolbarView;
+			sourceTree = "<group>";
+		};
+		BB490EEA2B7EBA9C000D232B /* OnboardingView */ = {
+			isa = PBXGroup;
+			children = (
+				BB490EE82B7EBA48000D232B /* OnboardingView.swift */,
+			);
+			path = OnboardingView;
+			sourceTree = "<group>";
+		};
+		BB490EEB2B7EBAAB000D232B /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				BB490E882B7E7025000D232B /* ContentView.swift */,
+				BB490EE62B7EAF1F000D232B /* UnavailableView.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		BB490EED2B7EBBEB000D232B /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				BB490EE22B7E89F1000D232B /* HealthKitViewModel.swift */,
+				BB490EEE2B7ED94C000D232B /* HKHealthRequest.swift */,
+				BB490EF02B7ED997000D232B /* HKAuthorizationStatus.swift */,
+				BB490EF22B7ED9C7000D232B /* HKBiologicalSex.swift */,
+				BB490EF42B7EDA1C000D232B /* HKDataHandler.swift */,
+			);
+			path = HealthKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +375,8 @@
 				BB490ECC2B7E72A2000D232B /* Double.swift in Sources */,
 				BB490E902B7E7025000D232B /* ContentView.swift in Sources */,
 				BB490EC12B7E7216000D232B /* DayModel.swift in Sources */,
+				BB490EEF2B7ED94C000D232B /* HKHealthRequest.swift in Sources */,
+				BB490EE92B7EBA48000D232B /* OnboardingView.swift in Sources */,
 				BB490EA72B7E718A000D232B /* DashboardView.swift in Sources */,
 				BB490ED62B7E72C3000D232B /* Vitamins.swift in Sources */,
 				BB490E922B7E7025000D232B /* VitalityPro.swift in Sources */,
@@ -345,12 +386,15 @@
 				BB490EDA2B7E733B000D232B /* FoodDetection.mlmodel in Sources */,
 				BB490EB02B7E71DD000D232B /* SettingsView.swift in Sources */,
 				BB490E9F2B7E7179000D232B /* CameraView.swift in Sources */,
+				BB490EF12B7ED997000D232B /* HKAuthorizationStatus.swift in Sources */,
+				BB490EF52B7EDA1C000D232B /* HKDataHandler.swift in Sources */,
 				BB490EAC2B7E71B7000D232B /* DetailInfoView.swift in Sources */,
 				BB490EE72B7EAF1F000D232B /* UnavailableView.swift in Sources */,
 				BB490EDD2B7E847D000D232B /* ToolbarView.swift in Sources */,
 				BB490EA62B7E718A000D232B /* DashboardEmojiView.swift in Sources */,
 				BB490ECD2B7E72A2000D232B /* DataManager.swift in Sources */,
 				BB490EBE2B7E7216000D232B /* FoodModel.swift in Sources */,
+				BB490EF32B7ED9C7000D232B /* HKBiologicalSex.swift in Sources */,
 				BB490EB22B7E71F7000D232B /* InfoView.swift in Sources */,
 				BB490ECF2B7E72A2000D232B /* Date.swift in Sources */,
 				BB490EAE2B7E71B7000D232B /* DetailView.swift in Sources */,

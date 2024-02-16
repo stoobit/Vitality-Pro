@@ -5,9 +5,13 @@ struct SettingsView: View {
     
     @AppStorage("biologicalsex") var biologicalFemale: Bool = true 
     @AppStorage("percentagegoal") var percentage: Double = 0.5
+    @AppStorage("notifications") var notifications: Bool = false
     
     let sexlabel = "The recommended vitamin amount differs for biological males and females."
+    
     let percentagelabel = "Set a proportion of the minimum recommended daily amount as your daily goal."
+    
+    let notificationsLabel = "Receive a notification every day at 5:15 p.m. reminding you to eat enough fruits/vegetables."
     
     var body: some View {
         NavigationStack {
@@ -32,16 +36,66 @@ struct SettingsView: View {
                     Label(percentagelabel, systemImage: "flag.fill")
                 }
                 
+                Section {
+                    Toggle("Notifications", isOn: $notifications)
+                        .tint(Color.orange)
+                        .onChange(of: notifications) {
+                            if notifications {
+                                requestNotifications()
+                                setNotifications()
+                            } else {
+                                UNUserNotificationCenter.current()
+                                    .removeAllPendingNotificationRequests()
+                            }
+                        }
+                    
+                } footer: {
+                    Label(notificationsLabel, systemImage: "bell.fill")
+                }
+                
             }
             .environment(\.defaultMinListRowHeight, 55)
-            .navigationTitle("Settings")
+            .toolbarBackground(.visible, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Done", action: { dismiss() })
                 }
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    Text("Settings")
+                        .foregroundStyle(Color.primary)
+                        .font(.headline.bold())
+                }
             }
         }
     }
+    
+    func requestNotifications() {
+        UNUserNotificationCenter.current().requestAuthorization(
+            options: [.alert, .badge, .sound]
+        ) { _, _ in
+            setNotifications()
+        }
+    }
+
+    func setNotifications() {
+        let content = UNMutableNotificationContent()
+        content.title = "Reminder"
+        content.subtitle = "Don't forget to eat enough vitamins."
+        content.sound = UNNotificationSound.default
+
+        var date = DateComponents()
+        date.hour = 17
+        date.minute = 15
+
+        let id = "dailynotification"
+
+        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
+        let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)
+
+        UNUserNotificationCenter.current().add(request)
+    }
+    
 }
 
 #Preview {
