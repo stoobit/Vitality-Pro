@@ -6,6 +6,7 @@ struct DetailInfoView: View {
     
     var vitamin: Vitamin
     var emojis: [Emoji]
+    var amount: Double
     
      let columns = [GridItem(.adaptive(minimum: 46))]
 
@@ -64,19 +65,4 @@ struct DetailInfoView: View {
                 .padding(.vertical, 2.5)
         }
     }
-    
-    var amount: Double {
-//        guard let day = days[Date().getWeekday()] else { return 0 }
-//        let amounts = day.amounts
-//            .filter { $0.vitamin == vitamin.title }
-//            .map(\.value)
-//        
-        var total: Double = 0 
-//        for value in amounts {
-//            total += value
-//        }
-        
-        return total
-    }
-    
 }

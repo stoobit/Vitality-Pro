@@ -2,6 +2,8 @@ import Charts
 import SwiftUI
 
 struct DetailStatisticsView: View {
+    @Environment(HealthKitViewModel.self) var healthViewModel
+    
     @AppStorage("biologicalsex") var biologicalFemale: Bool = true
     @AppStorage("percentagegoal") var percentage: Double = 0.5
     
@@ -36,10 +38,10 @@ struct DetailStatisticsView: View {
                     )
                     .clipShape(
                         UnevenRoundedRectangle(
-                            topLeadingRadius: 12,
+                            topLeadingRadius: 7,
                             bottomLeadingRadius: 0,
                             bottomTrailingRadius: 0,
-                            topTrailingRadius: 12
+                            topTrailingRadius: 7
                         )
                     )
                     .foregroundStyle(Date().getWeekday() == day ? Color.orange : Color.gray)
@@ -72,15 +74,14 @@ struct DetailStatisticsView: View {
     }
     
     func getAmount(of weekday: String) -> Double {
-        var value: Double = 0
-//        guard let amounts = days[weekday]?.amounts else { return 0 }
-//        
-//        for amount in amounts {
-//            if amount.vitamin == vitamin.title {
-//                value += amount.value
-//            }
-//        }
-//        
-        return value
+        guard let vitamin = healthViewModel.data.first(where: {
+            $0.id == vitamin.identifier
+        }) else { return 0 }
+        
+        guard let day = vitamin.days.first(where: {
+            $0.date.getWeekday() == weekday
+        }) else { return 0 }
+        
+        return day.amount
     }
 }

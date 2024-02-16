@@ -16,7 +16,7 @@ extension Date {
         case 4:
             return "Wed"
         case 5:
-            return "Thur"
+            return "Thu"
         case 6:
             return "Fri"
         case 7:

@@ -14,9 +14,8 @@ struct VitalityPro: App {
                     ContentView()
                         .onAppear {
                             sex()
-                            healthViewModel.loadData()
                         }
-                    
+
                 } else {
                     UnavailableView()
                 }

@@ -5,11 +5,15 @@ struct DetailView: View {
     
     var vitamin: Vitamin
     var emojis: [Emoji]
+    var amount: Double
     
     var body: some View {
         NavigationStack {
             Form {
-                DetailInfoView(vitamin: vitamin, emojis: emojis)
+                DetailInfoView(
+                    vitamin: vitamin, emojis: emojis, amount: amount
+                )
+                
                 DetailStatisticsView(vitamin: vitamin)
             }
             .environment(\.defaultMinListRowHeight, 55)

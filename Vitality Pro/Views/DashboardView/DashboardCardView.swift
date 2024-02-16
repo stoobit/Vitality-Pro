@@ -1,14 +1,19 @@
 import SwiftUI
 
 struct DashboardCardView: View {
-    @AppStorage("biologicalsex") var biologicalFemale: Bool = true 
+    @Environment(HealthKitViewModel.self) var healthViewModel
+    
+    @AppStorage("biologicalsex") var biologicalFemale: Bool = true
     @AppStorage("percentagegoal") var percentage: Double = 0.5
     
     @State var showDetail: Bool = false
     var vitamin: Vitamin
     
     var body: some View {
-        Button(action: { showDetail.toggle() }) {
+        Button(action: { 
+            showDetail.toggle()
+            healthViewModel.loadData()
+        }) {
             ZStack {
                 RoundedRectangle(cornerRadius: 18)
                     .foregroundStyle(.background)
@@ -81,7 +86,7 @@ struct DashboardCardView: View {
         .frame(maxWidth: .infinity)
         .frame(height: 200)
         .sheet(isPresented: $showDetail, content: {
-            DetailView(vitamin: vitamin, emojis: emojis)
+            DetailView(vitamin: vitamin, emojis: emojis, amount: amount)
                 .scrollIndicators(.never)
         })
     }
@@ -104,17 +109,15 @@ struct DashboardCardView: View {
     }
     
     var amount: Double {
-//        guard let day = days[Date().getWeekday()] else { return 0 }
-//        let amounts = day.amounts
-//            .filter { $0.vitamin == vitamin.title }
-//            .map(\.value)
-//        
-        var total: Double = 0 
-//        for value in amounts {
-//            total += value
-//        }
-//        
-        return total
+        guard let vitamin = healthViewModel.data.first(where: {
+            $0.id == vitamin.identifier
+        }) else { return 0 }
+        
+        guard let day = vitamin.days.first(where: {
+            $0.date.getWeekday() == Date().getWeekday()
+        }) else { return 0 }
+        
+        return day.amount
     }
     
     func goodAmount() -> Bool{

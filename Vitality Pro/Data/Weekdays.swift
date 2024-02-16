@@ -4,7 +4,7 @@ let weekdays: [String] = [
     "Mon",
     "Tue",
     "Wed",
-    "Thur",
+    "Thu",
     "Fri",
     "Sat", 
     "Sun"
