@@ -21,7 +21,7 @@ struct DetailStatisticsView: View {
                 Spacer()
                 
                 RoundedRectangle(cornerRadius: 60)
-                    .foregroundStyle(Color.orange)
+                    .foregroundStyle(Color.primary)
                     .frame(width: 15, height: 2)
                 Text("RDA")
                 
@@ -59,11 +59,11 @@ struct DetailStatisticsView: View {
                 
                 if biologicalFemale {
                     RuleMark(y: .value("RDA Female", vitamin.rdaf))
-                        .foregroundStyle(Color.orange)
+                        .foregroundStyle(Color.primary)
                         .cornerRadius(60)
                 } else {
                     RuleMark(y: .value("RDA Male", vitamin.rdam))
-                        .foregroundStyle(Color.orange)
+                        .foregroundStyle(Color.primary)
                         .cornerRadius(60)
                 }
             }

@@ -34,6 +34,7 @@ import HealthKit
     func healthRequest() {
         setupHealthRequest(healthStore: healthStore) {
             self.changeAuthorizationStatus()
+            self.loadData()
         }
     }
 }

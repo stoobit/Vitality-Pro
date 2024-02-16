@@ -29,7 +29,7 @@ struct VitalityPro: App {
                     .environment(healthViewModel)
             }
             .onAppear {
-                authorization()
+                healthViewModel.healthRequest()
             }
         }
     }

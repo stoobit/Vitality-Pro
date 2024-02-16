@@ -1,6 +1,9 @@
+import HealthKit
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(HealthKitViewModel.self) var healthViewModel
+    
     @AppStorage("last opened") var date: Data = .init()
     @State var properties: PropertyModel = .init()
     
@@ -32,11 +35,27 @@ struct ContentView: View {
     }
     
     func add(food: Food) {
-//        let day = Date().getWeekday()
-//        
-//        for vitamin in food.vitamins {
-//            let amount = Amount(vitamin: vitamin.key, value: vitamin.value)
-//            days[day]?.amounts.append(amount)
-//        }
+        for vitamin in food.vitamins {
+            guard let identifier = vitamins.first(where: {
+                $0.id == vitamin.key
+            })?.identifier else { continue }
+           
+            guard let type = HKSampleType.quantityType(forIdentifier: identifier) else {
+                return
+            }
+                
+            let quantity = HKQuantity(
+                unit: HKUnit.gramUnit(with: .milli),
+                doubleValue: vitamin.value
+            )
+            
+            let sample = HKQuantitySample(
+                type: type, quantity: quantity, start: Date(), end: Date()
+            )
+                
+            HKHealthStore().save(sample) { success, error in
+                healthViewModel.healthRequest()
+            }
+        }
     }
 }
