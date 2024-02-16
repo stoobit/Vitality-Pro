@@ -27,9 +27,26 @@ extension HealthKitViewModel {
                     return
                 }
                 
-                loadVitamin(with: identifier, start: start, end: end) { value in
+                self.loadVitamin(with: identifier, start: start, end: end) { value in
                     self.data[index].days.append(Day(date: start, amount: value))
                 }
+            }
+        }
+    }
+    
+    func update() {
+        for identifier in self.identifiers {
+            guard let idIndex = data.firstIndex(where: { $0.id == identifier }) else {
+                continue
+            }
+            
+            guard let dayIndex = data[idIndex].days.firstIndex(where: {
+                $0.date.getWeekday() == Date().getWeekday()
+            }) else { continue }
+            
+            let start = Calendar.current.startOfDay(for: Date())
+            loadVitamin(with: identifier, start: start, end: Date()) { value in 
+                self.data[idIndex].days[dayIndex].amount = value
             }
         }
     }

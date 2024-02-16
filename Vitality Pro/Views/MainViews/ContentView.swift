@@ -53,8 +53,8 @@ struct ContentView: View {
                 type: type, quantity: quantity, start: Date(), end: Date()
             )
                 
-            HKHealthStore().save(sample) { success, error in
-                healthViewModel.healthRequest()
+            HKHealthStore().save(sample) { _, _ in
+                healthViewModel.update()
             }
         }
     }
