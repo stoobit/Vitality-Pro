@@ -265,11 +265,9 @@ extension Camera: AVCapturePhotoCaptureDelegate {
 
 extension Camera: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        guard let pixelBuffer = sampleBuffer.imageBuffer else { return }
         
-        if connection.isVideoRotationAngleSupported(super.videoRotationAngleForHorizonLevelCapture) {
-            connection.videoRotationAngle = super.videoRotationAngleForHorizonLevelCapture
-        }
+        guard let pixelBuffer = sampleBuffer.imageBuffer else { return }
+        connection.videoRotationAngle = 90
 
         addToPreviewStream?(CIImage(cvPixelBuffer: pixelBuffer))
     }
