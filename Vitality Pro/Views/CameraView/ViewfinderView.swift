@@ -26,5 +26,6 @@ struct ViewfinderView: View {
                     )
             }
         }
+        .statusBarHidden()
     }
 }
