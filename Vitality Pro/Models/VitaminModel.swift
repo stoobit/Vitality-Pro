@@ -5,20 +5,20 @@ struct Vitamin: Identifiable, Hashable {
     var id: String
     
     init(
-        title: String,
-        alternative: String,
+        title: LocalizedStringResource,
+        alternative: LocalizedStringResource,
         identifier: HKQuantityTypeIdentifier,
         rdam: Double,
         rdaf: Double,
-        description: String
+        description: LocalizedStringResource
     ) {
-        self.id = title
-        self.title = title
-        self.alternative = alternative
+        self.id = String(localized: title)
+        self.title = String(localized: title)
+        self.alternative = String(localized: alternative)
         self.identifier = identifier
         self.rdam = rdam
         self.rdaf = rdaf
-        self.description = description
+        self.description = String(localized: description)
     }
     
     var title: String

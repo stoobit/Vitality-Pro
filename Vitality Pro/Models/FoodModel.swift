@@ -8,9 +8,13 @@ struct Food: Identifiable, Hashable {
     
     var vitamins: [String: Double] = [:]
     
-    init(title: String, emoji: String, vitamins: [String : Double]) {
-        self.id = title
-        self.title = title
+    init(
+        title: LocalizedStringResource,
+        emoji: String,
+        vitamins: [String: Double]
+    ) {
+        self.id = String(localized: title)
+        self.title = String(localized: title)
         self.emoji = emoji
         self.vitamins = vitamins
     }

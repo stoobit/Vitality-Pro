@@ -47,7 +47,7 @@
 		BB4917132B7EF548000D232B /* HealthKitModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4917122B7EF548000D232B /* HealthKitModels.swift */; };
 		BB735B9F2BD6943D003C30C6 /* Mixpanel in Frameworks */ = {isa = PBXBuildFile; productRef = BB735B9E2BD6943D003C30C6 /* Mixpanel */; };
 		BBF437D82BD6E4CA0038B24D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = BBF437D72BD6E4CA0038B24D /* Localizable.xcstrings */; };
-		BBF437DA2BD6E4D90038B24D /* Info Plist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = BBF437D92BD6E4D90038B24D /* Info Plist.xcstrings */; };
+		BBF437DA2BD6E4D90038B24D /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = BBF437D92BD6E4D90038B24D /* InfoPlist.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,8 +92,9 @@
 		BB490EF42B7EDA1C000D232B /* HKDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKDataHandler.swift; sourceTree = "<group>"; };
 		BB4917122B7EF548000D232B /* HealthKitModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitModels.swift; sourceTree = "<group>"; };
 		BBF437D72BD6E4CA0038B24D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		BBF437D92BD6E4D90038B24D /* Info Plist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = "Info Plist.xcstrings"; sourceTree = "<group>"; };
+		BBF437D92BD6E4D90038B24D /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		BBF437DB2BD6E53C0038B24D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		BBF437DC2BD6E6180038B24D /* Vitality-Pro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Vitality-Pro-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,11 +136,12 @@
 				BB490EED2B7EBBEB000D232B /* HealthKit */,
 				BB490EC72B7E7289000D232B /* Extensions */,
 				BB490ED02B7E72B1000D232B /* Data */,
-				BB490E7A2B7E6FA5000D232B /* Assets.xcassets */,
 				BB490ED92B7E733B000D232B /* FoodDetection.mlmodel */,
 				BBF437D72BD6E4CA0038B24D /* Localizable.xcstrings */,
-				BBF437D92BD6E4D90038B24D /* Info Plist.xcstrings */,
+				BBF437D92BD6E4D90038B24D /* InfoPlist.xcstrings */,
+				BB490E7A2B7E6FA5000D232B /* Assets.xcassets */,
 				BBF437DB2BD6E53C0038B24D /* PrivacyInfo.xcprivacy */,
+				BBF437DC2BD6E6180038B24D /* Vitality-Pro-Info.plist */,
 				BB490E7C2B7E6FA5000D232B /* Preview Content */,
 			);
 			path = "Vitality Pro";
@@ -339,6 +341,10 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				fr,
+				es,
+				ko,
 			);
 			mainGroup = BB490E6A2B7E6FA3000D232B;
 			packageReferences = (
@@ -361,7 +367,7 @@
 				BB490E7E2B7E6FA5000D232B /* Preview Assets.xcassets in Resources */,
 				BB490E7B2B7E6FA5000D232B /* Assets.xcassets in Resources */,
 				BBF437D82BD6E4CA0038B24D /* Localizable.xcstrings in Resources */,
-				BBF437DA2BD6E4D90038B24D /* Info Plist.xcstrings in Resources */,
+				BBF437DA2BD6E4D90038B24D /* InfoPlist.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +552,7 @@
 				DEVELOPMENT_TEAM = X8ZDMM9V4U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Vitality-Pro-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Use your iPhone's camera to take pictures of the fruits/vegetables you eat.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow Vitality Pro to access your vitamin data.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow Vitality Pro to write Health data based on the fruits/vegetables you eat.";
@@ -584,6 +591,7 @@
 				DEVELOPMENT_TEAM = X8ZDMM9V4U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Vitality-Pro-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Use your iPhone's camera to take pictures of the fruits/vegetables you eat.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow Vitality Pro to access your vitamin data.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow Vitality Pro to write Health data based on the fruits/vegetables you eat.";
