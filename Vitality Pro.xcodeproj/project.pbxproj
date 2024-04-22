@@ -45,6 +45,7 @@
 		BB490EF32B7ED9C7000D232B /* HKBiologicalSex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EF22B7ED9C7000D232B /* HKBiologicalSex.swift */; };
 		BB490EF52B7EDA1C000D232B /* HKDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EF42B7EDA1C000D232B /* HKDataHandler.swift */; };
 		BB4917132B7EF548000D232B /* HealthKitModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4917122B7EF548000D232B /* HealthKitModels.swift */; };
+		BB735B9F2BD6943D003C30C6 /* Mixpanel in Frameworks */ = {isa = PBXBuildFile; productRef = BB735B9E2BD6943D003C30C6 /* Mixpanel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		BB490EF22B7ED9C7000D232B /* HKBiologicalSex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKBiologicalSex.swift; sourceTree = "<group>"; };
 		BB490EF42B7EDA1C000D232B /* HKDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKDataHandler.swift; sourceTree = "<group>"; };
 		BB4917122B7EF548000D232B /* HealthKitModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitModels.swift; sourceTree = "<group>"; };
+		BB735BA02BD695D2003C30C6 /* Purchase.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Purchase.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB735B9F2BD6943D003C30C6 /* Mixpanel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +132,7 @@
 				BB490EC72B7E7289000D232B /* Extensions */,
 				BB490ED02B7E72B1000D232B /* Data */,
 				BB490E7A2B7E6FA5000D232B /* Assets.xcassets */,
+				BB735BA02BD695D2003C30C6 /* Purchase.storekit */,
 				BB490ED92B7E733B000D232B /* FoodDetection.mlmodel */,
 				BB490E7C2B7E6FA5000D232B /* Preview Content */,
 			);
@@ -299,6 +303,9 @@
 			dependencies = (
 			);
 			name = "Vitality Pro";
+			packageProductDependencies = (
+				BB735B9E2BD6943D003C30C6 /* Mixpanel */,
+			);
 			productName = "Vitality Pro";
 			productReference = BB490E732B7E6FA3000D232B /* Vitality Pro.app */;
 			productType = "com.apple.product-type.application";
@@ -328,6 +335,9 @@
 				Base,
 			);
 			mainGroup = BB490E6A2B7E6FA3000D232B;
+			packageReferences = (
+				BB735B9D2BD6943D003C30C6 /* XCRemoteSwiftPackageReference "mixpanel-swift" */,
+			);
 			productRefGroup = BB490E742B7E6FA3000D232B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -612,6 +622,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BB735B9D2BD6943D003C30C6 /* XCRemoteSwiftPackageReference "mixpanel-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mixpanel/mixpanel-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BB735B9E2BD6943D003C30C6 /* Mixpanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB735B9D2BD6943D003C30C6 /* XCRemoteSwiftPackageReference "mixpanel-swift" */;
+			productName = Mixpanel;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BB490E6B2B7E6FA3000D232B /* Project object */;
 }

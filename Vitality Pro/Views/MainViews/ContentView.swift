@@ -1,4 +1,5 @@
 import HealthKit
+import Mixpanel
 import SwiftUI
 
 struct ContentView: View {
@@ -35,11 +36,14 @@ struct ContentView: View {
     }
     
     func add(food: Food) {
+        Mixpanel.mainInstance()
+            .track(event: food.title, properties: [:])
+        
         for vitamin in food.vitamins {
             guard let identifier = vitamins.first(where: {
                 $0.id == vitamin.key
             })?.identifier else { continue }
-           
+            
             guard let type = HKSampleType.quantityType(forIdentifier: identifier) else {
                 return
             }

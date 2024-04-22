@@ -1,3 +1,4 @@
+import Mixpanel
 import SwiftUI
 
 struct CameraView: View {
@@ -6,7 +7,7 @@ struct CameraView: View {
     
     @State private var showInfo: Bool = false
     
-    var action: (Food?) -> Void 
+    var action: (Food?) -> Void
     
     init(action: @escaping (Food?) -> Void) {
         self.action = action
@@ -17,7 +18,7 @@ struct CameraView: View {
     }
     
     var body: some View {
-        GeometryReader { geometry in
+        GeometryReader { _ in
             ViewfinderView(
                 image: $model.viewfinderImage,
                 snapshot: $model.image
@@ -47,11 +48,18 @@ struct CameraView: View {
         .sheet(isPresented: $showInfo, content: {
             HelpView()
         })
+        .onAppear {
+            Mixpanel.mainInstance()
+                .track(event: "Camera Opened", properties: [:])
+        }
     }
     
     @ViewBuilder func ViewfinderButtons() -> some View {
         HStack {
             Button("Cancel", systemImage: "xmark.circle.fill", action: {
+                Mixpanel.mainInstance()
+                    .track(event: "Camera Cancelled", properties: [:])
+                
                 dismiss()
             })
             .labelStyle(.iconOnly)
@@ -89,6 +97,9 @@ struct CameraView: View {
     @ViewBuilder func ResultButtons() -> some View {
         HStack {
             Button("Cancel", systemImage: "xmark.circle.fill", action: {
+                Mixpanel.mainInstance()
+                    .track(event: "Camera Cancelled", properties: [:])
+                
                 dismiss()
             })
             .labelStyle(.iconOnly)
@@ -98,7 +109,7 @@ struct CameraView: View {
             
             Spacer()
             
-            Button(action: { 
+            Button(action: {
                 action(model.food)
                 dismiss()
             }) {
@@ -123,7 +134,7 @@ struct CameraView: View {
             Menu("Options", systemImage: "ellipsis.circle.fill") {
                 ForEach(foods) { food in
                     Button(action: { model.food = food }) {
-                        Label(title: { Text(food.title) }) { 
+                        Label(title: { Text(food.title) }) {
                             Text(food.emoji)
                         }
                     }

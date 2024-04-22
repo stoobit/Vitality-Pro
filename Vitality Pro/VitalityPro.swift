@@ -1,7 +1,11 @@
+import Mixpanel
 import SwiftUI
 
 @main
 struct VitalityPro: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @Environment(\.scenePhase) var scenePhase
+
     @AppStorage("biologicalsex") var biologicalFemale: Bool = true
     @AppStorage("firstopen") var firstOpen: Bool = true
 
@@ -45,5 +49,22 @@ struct VitalityPro: App {
         if healthViewModel.biologicalSex == .male {
             biologicalFemale = false
         }
+    }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+    ) -> Bool {
+        Mixpanel.initialize(
+            token: "a7ee64aa1d66781642086b8d724cfd0b",
+            trackAutomaticEvents: false
+        )
+
+        Mixpanel.mainInstance()
+            .track(event: "Signed Up", properties: [:])
+
+        return true
     }
 }
