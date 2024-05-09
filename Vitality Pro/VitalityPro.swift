@@ -7,40 +7,21 @@ struct VitalityPro: App {
     @Environment(\.scenePhase) var scenePhase
 
     @AppStorage("biologicalsex") var biologicalFemale: Bool = true
-    @AppStorage("firstopen") var firstOpen: Bool = true
-
     @State var healthViewModel = HealthKitViewModel()
 
     var body: some Scene {
         WindowGroup {
             VStack {
-                if healthViewModel.isAuthorized {
-                    ContentView()
-                        .onAppear {
-                            sex()
-                        }
+                ContentView()
+                    .onAppear {
+                        healthViewModel.healthRequest()
+                        healthViewModel.changeAuthorizationStatus()
 
-                } else {
-                    UnavailableView()
-                }
+                        sex()
+                    }
             }
             .animation(.bouncy, value: healthViewModel.isAuthorized)
             .environment(healthViewModel)
-            .fullScreenCover(isPresented: $firstOpen, onDismiss: {
-                healthViewModel.healthRequest()
-            }) {
-                OnboardingView()
-                    .environment(healthViewModel)
-            }
-            .onAppear {
-                healthViewModel.healthRequest()
-            }
-        }
-    }
-
-    func authorization() {
-        if firstOpen == false {
-            healthViewModel.changeAuthorizationStatus()
         }
     }
 

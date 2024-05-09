@@ -16,13 +16,17 @@ struct ContentView: View {
                 .navigationTitle("Vitality Pro")
                 .toolbar { ToolbarView() }
                 .toolbarRole(.editor)
-                .fullScreenCover(isPresented: $properties.showCamera, content: {
-                    CameraView { food in
-                        if let food = food {
-                            add(food: food)
+                .fullScreenCover(isPresented: $properties.showCamera) {
+                    if  healthViewModel.isAuthorized {
+                        CameraView { food in
+                            if let food = food {
+                                add(food: food)
+                            }
                         }
+                    } else {
+                        UnavailableView()
                     }
-                })
+                }
                 .sheet(isPresented: $properties.showInfo, content: {
                     InfoView()
                         .scrollIndicators(.never)

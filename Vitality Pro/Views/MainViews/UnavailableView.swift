@@ -8,31 +8,40 @@
 import SwiftUI
 
 struct UnavailableView: View {
+    @Environment(\.dismiss) var dismiss
+
     var body: some View {
-        VStack {
-            ContentUnavailableView(label: {
-                Label(
-                    title: { Text("Unable to load Health data.") },
-                    icon: {
-                        HStack(spacing: 10) {
-                            Image(systemName: "carrot.fill")
-                                .foregroundStyle(Color.orange.gradient)
-                            
-                            Text("+")
-                                .font(.title)
-                            
-                            Image(systemName: "heart.fill")
-                                .foregroundStyle(Color.pink.gradient)
+        NavigationStack {
+            ZStack {
+                Color(UIColor.systemGroupedBackground)
+                    .ignoresSafeArea(.all)
+
+                ContentUnavailableView(label: {
+                    Label(
+                        title: { Text("Unable to load Health data.") },
+                        icon: {
+                            HStack(spacing: 10) {
+                                Image(systemName: "carrot.fill")
+                                    .foregroundStyle(Color.orange.gradient)
+
+                                Text("+")
+                                    .font(.title)
+
+                                Image(systemName: "heart.fill")
+                                    .foregroundStyle(Color.pink.gradient)
+                            }
                         }
-                    }
-                )
-            }, description: {
-                Text("Please allow Vitality Pro to access your health data to use this app.")
-            })
+                    )
+                }, description: {
+                    Text("Please allow Vitality Pro to access your health data to use this app.")
+                })
+            }
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel", action: { dismiss() })
+                }
+            }
         }
-        
-        ProgressView()
-            .controlSize(.large)
     }
 }
 

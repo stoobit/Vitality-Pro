@@ -39,7 +39,6 @@
 		BB490EDD2B7E847D000D232B /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EDC2B7E847D000D232B /* ToolbarView.swift */; };
 		BB490EE42B7E89F1000D232B /* HealthKitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EE22B7E89F1000D232B /* HealthKitViewModel.swift */; };
 		BB490EE72B7EAF1F000D232B /* UnavailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EE62B7EAF1F000D232B /* UnavailableView.swift */; };
-		BB490EE92B7EBA48000D232B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EE82B7EBA48000D232B /* OnboardingView.swift */; };
 		BB490EEF2B7ED94C000D232B /* HKHealthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EEE2B7ED94C000D232B /* HKHealthRequest.swift */; };
 		BB490EF12B7ED997000D232B /* HKAuthorizationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EF02B7ED997000D232B /* HKAuthorizationStatus.swift */; };
 		BB490EF32B7ED9C7000D232B /* HKBiologicalSex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EF22B7ED9C7000D232B /* HKBiologicalSex.swift */; };
@@ -85,7 +84,6 @@
 		BB490EE22B7E89F1000D232B /* HealthKitViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitViewModel.swift; sourceTree = "<group>"; };
 		BB490EE52B7E9530000D232B /* Vitality Pro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Vitality Pro.entitlements"; sourceTree = "<group>"; };
 		BB490EE62B7EAF1F000D232B /* UnavailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnavailableView.swift; sourceTree = "<group>"; };
-		BB490EE82B7EBA48000D232B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		BB490EEE2B7ED94C000D232B /* HKHealthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKHealthRequest.swift; sourceTree = "<group>"; };
 		BB490EF02B7ED997000D232B /* HKAuthorizationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKAuthorizationStatus.swift; sourceTree = "<group>"; };
 		BB490EF22B7ED9C7000D232B /* HKBiologicalSex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKBiologicalSex.swift; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				BB490EEB2B7EBAAB000D232B /* MainViews */,
-				BB490EEA2B7EBA9C000D232B /* OnboardingView */,
 				BB490EDB2B7E8457000D232B /* ToolbarView */,
 				BB490E972B7E7119000D232B /* DashboardView */,
 				BB490E982B7E712C000D232B /* DetailView */,
@@ -266,14 +263,6 @@
 				BB490EDC2B7E847D000D232B /* ToolbarView.swift */,
 			);
 			path = ToolbarView;
-			sourceTree = "<group>";
-		};
-		BB490EEA2B7EBA9C000D232B /* OnboardingView */ = {
-			isa = PBXGroup;
-			children = (
-				BB490EE82B7EBA48000D232B /* OnboardingView.swift */,
-			);
-			path = OnboardingView;
 			sourceTree = "<group>";
 		};
 		BB490EEB2B7EBAAB000D232B /* MainViews */ = {
@@ -398,7 +387,6 @@
 				BB490ECC2B7E72A2000D232B /* Double.swift in Sources */,
 				BB490E902B7E7025000D232B /* ContentView.swift in Sources */,
 				BB490EEF2B7ED94C000D232B /* HKHealthRequest.swift in Sources */,
-				BB490EE92B7EBA48000D232B /* OnboardingView.swift in Sources */,
 				BB490EA72B7E718A000D232B /* DashboardView.swift in Sources */,
 				BB490ED62B7E72C3000D232B /* Vitamins.swift in Sources */,
 				BB490E922B7E7025000D232B /* VitalityPro.swift in Sources */,
