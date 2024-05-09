@@ -1,11 +1,15 @@
+import StoreKit
 import SwiftUI
 
 struct SettingsView: View {
+    @StateObject private var store = TipsStore()
     @Environment(\.dismiss) var dismiss
     
-    @AppStorage("biologicalsex") var biologicalFemale: Bool = true 
+    @AppStorage("biologicalsex") var biologicalFemale: Bool = true
     @AppStorage("percentagegoal") var percentage: Double = 0.5
     @AppStorage("notifications") var notifications: Bool = false
+    
+    @State var alert: Bool = false
     
     let sexlabel = "The recommended vitamin amount differs for biological males and females."
     
@@ -29,7 +33,7 @@ struct SettingsView: View {
                 }
                 
                 Section {
-                    Stepper(value: $percentage, in: 0.25...2, step: Double(0.05)) {
+                    Stepper(value: $percentage, in: 0.25 ... 2, step: Double(0.05)) {
                         Text("\(String((percentage * 100).rounded(toPlaces: 2)))%")
                     }
                 } footer: {
@@ -53,6 +57,31 @@ struct SettingsView: View {
                     Label(notificationsLabel, systemImage: "bell.fill")
                 }
                 
+                Section("Support Me") {
+                    ProductView(id: "com.stoobit.vitalitiypro.purchase.small", icon: {
+                        Image(systemName: "carrot.fill")
+                            .padding(.trailing, 2)
+                    })
+                    .productViewStyle(.compact)
+                    
+                    ProductView(id: "com.stoobit.vitalitiypro.purchase.medium", icon: {
+                        Image(systemName: "cup.and.saucer.fill")
+                            .padding(.trailing, 2)
+                    })
+                    .productViewStyle(.compact)
+                    
+                    ProductView(id: "com.stoobit.vitalitiypro.purchase.large", icon: {
+                        Image(systemName: "takeoutbag.and.cup.and.straw.fill")
+                            .padding(.trailing, 2)
+                    })
+                    .productViewStyle(.compact)
+                }
+                .onInAppPurchaseStart(perform: { _ in })
+                .onInAppPurchaseCompletion { _, result in
+                    if case .success(.success(_)) = result {
+                        alert.toggle()
+                    }
+                }
             }
             .environment(\.defaultMinListRowHeight, 55)
             .toolbarBackground(.visible, for: .navigationBar)
@@ -66,6 +95,9 @@ struct SettingsView: View {
                         .foregroundStyle(Color.primary)
                         .font(.headline.bold())
                 }
+            }
+            .alert("Thank You!", isPresented: $alert) {
+                Button("Close", role: .cancel) { alert = false }
             }
         }
     }
@@ -95,7 +127,6 @@ struct SettingsView: View {
 
         UNUserNotificationCenter.current().add(request)
     }
-    
 }
 
 #Preview {

@@ -65,6 +65,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         Mixpanel.mainInstance()
             .track(event: "Signed Up", properties: [:])
 
+        UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = .systemOrange
+
         return true
     }
 }

@@ -18,11 +18,11 @@ struct ToolbarView: ToolbarContent {
         }
 
         ToolbarItemGroup(placement: .topBarLeading) {
-            Button("Settings", systemImage: "gearshape.fill", action: {
+            Button("Settings", systemImage: "carrot.fill", action: {
                 self.properties.showSettings.toggle()
             })
 
-            Button("Information", systemImage: "carrot.fill", action: {
+            Button("Information", systemImage: "person.fill", action: {
                 self.properties.showInfo.toggle()
             })
         }

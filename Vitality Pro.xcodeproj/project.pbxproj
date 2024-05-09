@@ -46,6 +46,8 @@
 		BB490EF52B7EDA1C000D232B /* HKDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB490EF42B7EDA1C000D232B /* HKDataHandler.swift */; };
 		BB4917132B7EF548000D232B /* HealthKitModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4917122B7EF548000D232B /* HealthKitModels.swift */; };
 		BB735B9F2BD6943D003C30C6 /* Mixpanel in Frameworks */ = {isa = PBXBuildFile; productRef = BB735B9E2BD6943D003C30C6 /* Mixpanel */; };
+		BBAF012D2BED720800002A36 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAF012C2BED720800002A36 /* StoreKit.framework */; };
+		BBAF01302BED86BE00002A36 /* TipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAF012F2BED86BE00002A36 /* TipManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +91,9 @@
 		BB490EF22B7ED9C7000D232B /* HKBiologicalSex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKBiologicalSex.swift; sourceTree = "<group>"; };
 		BB490EF42B7EDA1C000D232B /* HKDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKDataHandler.swift; sourceTree = "<group>"; };
 		BB4917122B7EF548000D232B /* HealthKitModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitModels.swift; sourceTree = "<group>"; };
+		BBAF012C2BED720800002A36 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BBAF012E2BED725E00002A36 /* StoreKit.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKit.storekit; sourceTree = "<group>"; };
+		BBAF012F2BED86BE00002A36 /* TipManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipManager.swift; sourceTree = "<group>"; };
 		BBF437DB2BD6E53C0038B24D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		BBF437DC2BD6E6180038B24D /* Vitality-Pro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Vitality-Pro-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -99,6 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB735B9F2BD6943D003C30C6 /* Mixpanel in Frameworks */,
+				BBAF012D2BED720800002A36 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +116,7 @@
 			children = (
 				BB490E752B7E6FA3000D232B /* Vitality Pro */,
 				BB490E742B7E6FA3000D232B /* Products */,
+				BBAF012B2BED720800002A36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +142,7 @@
 				BB490ED92B7E733B000D232B /* FoodDetection.mlmodel */,
 				BB490E7A2B7E6FA5000D232B /* Assets.xcassets */,
 				BBF437DB2BD6E53C0038B24D /* PrivacyInfo.xcprivacy */,
+				BBAF012E2BED725E00002A36 /* StoreKit.storekit */,
 				BBF437DC2BD6E6180038B24D /* Vitality-Pro-Info.plist */,
 				BB490E7C2B7E6FA5000D232B /* Preview Content */,
 			);
@@ -207,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				BB490EAF2B7E71DD000D232B /* SettingsView.swift */,
+				BBAF012F2BED86BE00002A36 /* TipManager.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";
@@ -287,6 +296,14 @@
 				BB490EF42B7EDA1C000D232B /* HKDataHandler.swift */,
 			);
 			path = HealthKit;
+			sourceTree = "<group>";
+		};
+		BBAF012B2BED720800002A36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBAF012C2BED720800002A36 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,6 +407,7 @@
 				BB490EBB2B7E7216000D232B /* EmojiModel.swift in Sources */,
 				BB490EDA2B7E733B000D232B /* FoodDetection.mlmodel in Sources */,
 				BB490EB02B7E71DD000D232B /* SettingsView.swift in Sources */,
+				BBAF01302BED86BE00002A36 /* TipManager.swift in Sources */,
 				BB490E9F2B7E7179000D232B /* CameraView.swift in Sources */,
 				BB490EF12B7ED997000D232B /* HKAuthorizationStatus.swift in Sources */,
 				BB490EF52B7EDA1C000D232B /* HKDataHandler.swift in Sources */,
