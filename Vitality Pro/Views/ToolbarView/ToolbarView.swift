@@ -22,7 +22,7 @@ struct ToolbarView: ToolbarContent {
                 self.properties.showSettings.toggle()
             })
 
-            Button("Information", systemImage: "person.fill", action: {
+            Button("Information", systemImage: "person.fill.questionmark", action: {
                 self.properties.showInfo.toggle()
             })
         }

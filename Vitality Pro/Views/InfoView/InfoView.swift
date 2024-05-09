@@ -33,7 +33,7 @@ struct InfoView: View {
                             .foregroundStyle(Color.green)
                     })    
                 }, footer: {
-                     Text("Please note that the amounts shown are based on averages and do not reflect the exact amount of vitamins you consume.There are also other vitamins, but they must be obtained from other sources such as sunlight, nuts or other products.")
+                     Text("Please note that the amounts shown are based on averages and do not reflect the exact amount of vitamins you consume. There are also other vitamins, but they must be obtained from other sources such as sunlight, nuts or other products.")
                 })
                 
                 Section(content: {
