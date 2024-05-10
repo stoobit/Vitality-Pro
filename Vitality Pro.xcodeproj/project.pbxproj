@@ -541,7 +541,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Vitality Pro/Vitality Pro.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Vitality Pro/Preview Content\"";
 				DEVELOPMENT_TEAM = X8ZDMM9V4U;
 				ENABLE_PREVIEWS = YES;
@@ -580,7 +580,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Vitality Pro/Vitality Pro.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Vitality Pro/Preview Content\"";
 				DEVELOPMENT_TEAM = X8ZDMM9V4U;
 				ENABLE_PREVIEWS = YES;

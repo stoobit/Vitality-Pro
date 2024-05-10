@@ -58,20 +58,8 @@ struct SettingsView: View {
                 }
                 
                 Section("Support Me") {
-                    ProductView(id: "com.stoobit.vitalitiypro.purchase.small", icon: {
-                        Image(systemName: "carrot.fill")
-                            .padding(.trailing, 2)
-                    })
-                    .productViewStyle(.compact)
-                    
                     ProductView(id: "com.stoobit.vitalitiypro.purchase.medium", icon: {
                         Image(systemName: "cup.and.saucer.fill")
-                            .padding(.trailing, 2)
-                    })
-                    .productViewStyle(.compact)
-                    
-                    ProductView(id: "com.stoobit.vitalitiypro.purchase.large", icon: {
-                        Image(systemName: "takeoutbag.and.cup.and.straw.fill")
                             .padding(.trailing, 2)
                     })
                     .productViewStyle(.compact)

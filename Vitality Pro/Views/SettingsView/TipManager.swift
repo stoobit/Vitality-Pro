@@ -9,9 +9,7 @@ import Foundation
 import StoreKit
 
 let myTipProducts = [
-    "com.stoobit.vitalitiypro.purchase.small",
     "com.stoobit.vitalitiypro.purchase.medium",
-    "com.stoobit.vitalitiypro.purchase.large"
 ]
 
 typealias PurchaseResult = Product.PurchaseResult

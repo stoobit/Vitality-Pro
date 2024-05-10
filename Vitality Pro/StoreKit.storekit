@@ -5,48 +5,18 @@
   ],
   "products" : [
     {
-      "displayPrice" : "0.99",
-      "familyShareable" : false,
-      "internalID" : "6502470652",
-      "localizations" : [
-        {
-          "description" : "Buy me a carrot for a snack.",
-          "displayName" : "Small Tip",
-          "locale" : "en_US"
-        }
-      ],
-      "productID" : "com.stoobit.vitalitiypro.purchase.small",
-      "referenceName" : "Buy me a Carrot",
-      "type" : "Consumable"
-    },
-    {
       "displayPrice" : "3.99",
       "familyShareable" : false,
       "internalID" : "6502470733",
       "localizations" : [
         {
-          "description" : "Buy me a coffee to stay awake in the morning.",
-          "displayName" : "Medium Tip",
+          "description" : "Support the development of Vitality Pro.",
+          "displayName" : "Buy me a Coffee",
           "locale" : "en_US"
         }
       ],
       "productID" : "com.stoobit.vitalitiypro.purchase.medium",
       "referenceName" : "Buy me a Coffee",
-      "type" : "Consumable"
-    },
-    {
-      "displayPrice" : "8.99",
-      "familyShareable" : false,
-      "internalID" : "6502470634",
-      "localizations" : [
-        {
-          "description" : "Buy me a meal to boost the app's development.",
-          "displayName" : "Large Tip",
-          "locale" : "en_US"
-        }
-      ],
-      "productID" : "com.stoobit.vitalitiypro.purchase.large",
-      "referenceName" : "Buy me a Meal",
       "type" : "Consumable"
     }
   ],
@@ -54,7 +24,7 @@
     "_applicationInternalID" : "6478023736",
     "_developerTeamID" : "X8ZDMM9V4U",
     "_failTransactionsEnabled" : false,
-    "_lastSynchronizedDate" : 736984215.36417794,
+    "_lastSynchronizedDate" : 737036281.72537196,
     "_locale" : "de",
     "_storefront" : "DEU",
     "_storeKitErrors" : [
